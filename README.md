@@ -22,10 +22,10 @@ CurrencyConverterApp is an IOS app for converting amount given in one currency t
 ## Demo
 For full Demo click [here](https://drive.google.com/drive/u/0/folders/1UpGc8nZ2tcgK9rp96cGJKPrXtx1_Mt29)
 
-![DemoGif]<img src="./gif/currencyConverter.gif" width="500" height="600">
+<img src="./gif/currencyConverter.gif" width="500" height="600">
 
 ## ScreenShot
-![CurrencyConverter]<img src="./screenshots/CurrencyConvert.png" width="500" height="600">
+<img src="./screenshots/CurrencyConvert.png" width="500" height="600">
 
 
 
