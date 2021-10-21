@@ -67,29 +67,36 @@
                                         <rect key="frame" x="0.0" y="526.5" width="400" height="300"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter amount" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oo1-gJ-CXa">
-                                                <rect key="frame" x="0.0" y="0.0" width="400" height="67.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="52"/>
                                                 <color key="textColor" systemColor="linkColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSu-77-QAs">
-                                                <rect key="frame" x="0.0" y="77.5" width="400" height="67.5"/>
+                                                <rect key="frame" x="0.0" y="62" width="400" height="52"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Convert"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Get Exchange Rate"/>
                                                 <connections>
                                                     <action selector="getConvertedCurrencyValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GVu-XG-v3k"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTS-fv-HAO">
-                                                <rect key="frame" x="0.0" y="155" width="400" height="67.5"/>
+                                                <rect key="frame" x="0.0" y="124" width="400" height="52"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" systemColor="systemRedColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnY-e9-mlT">
-                                                <rect key="frame" x="0.0" y="232.5" width="400" height="67.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Conversion Rate=0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kvl-fG-nPs">
+                                                <rect key="frame" x="0.0" y="186" width="400" height="52"/>
+                                                <color key="backgroundColor" red="0.79956359789999998" green="0.91969697620000002" blue="0.82378000360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <color key="textColor" systemColor="systemGreenColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result=0.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnY-e9-mlT">
+                                                <rect key="frame" x="0.0" y="248" width="400" height="52"/>
                                                 <color key="backgroundColor" red="0.79956359787712228" green="0.91969697622908764" blue="0.82378000364286108" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="textColor" systemColor="systemGreenColor"/>
@@ -113,6 +120,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="conversionRateDisplay" destination="Kvl-fG-nPs" id="xpe-UE-K0s"/>
                         <outlet property="convertedCurrencyLabel" destination="tnY-e9-mlT" id="rNB-Li-ZL4"/>
                         <outlet property="errorLabel" destination="UTS-fv-HAO" id="MKU-xO-BXf"/>
                         <outlet property="fromCurrencyPicker" destination="dGT-eZ-l3J" id="P6t-mZ-YmG"/>

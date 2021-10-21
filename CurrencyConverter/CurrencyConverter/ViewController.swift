@@ -25,6 +25,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    @IBOutlet weak var conversionRateDisplay: UILabel!
+    
     let baseUrl="https://free.currconv.com/api/v7/convert?q="
     let apiKey="3bcb9122d07b513e1dee"
    
@@ -108,11 +110,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let conversionRate=convertedValue[conversionKey]
             let rateFloat=(conversionRate).float
             let convertedAmount=amount*rateFloat!
+            
+            self.conversionRateDisplay.text="Conversion Rate=\(conversionRate)"
             self.convertedCurrencyLabel.text=self.fromLabel.text!+"->"+self.toLabel.text!+" = "+"\(convertedAmount)"
         }
         
     }
     
 
+  
 }
 
